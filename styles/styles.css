@@ -197,7 +197,81 @@ header nav ul {
 /********************************************************
  ------------------ OPINION -----------------------------
 ********************************************************/
+.opinion {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 40px;
+  justify-content: space-between;
+}
+.opinion img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 500px;
+  box-shadow: 2px 4px 8px var(--dark);
+}
+.carousel {
+  position: relative;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carousel img {
+  width: 100%;
+  max-width: 780px;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+  min-width: 100%;
+}
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.arrow {
+  background-color: var(--dark-pink);
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+}
 
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.dot.active {
+  background-color: var(--dark);
+}
 /********************************************************
  ------------------ NEWS --------------------------------
 ********************************************************/
