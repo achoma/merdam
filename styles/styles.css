@@ -18,7 +18,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .container {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   max-width: 428px;
   margin: 0 auto;
   padding: 0 15px;
@@ -162,6 +162,13 @@ header nav a:hover {
   max-width: 480px;
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
+}
+.services ul {
+  padding-top: 8px;
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
 }
 #check {
   fill: var(--darkest-pink);
