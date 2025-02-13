@@ -18,7 +18,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .container {
-  /* border: solid 1px red; */
   max-width: 428px;
   margin: 0 auto;
   padding: 0 15px;
@@ -163,8 +162,10 @@ header nav a:hover {
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
 }
+.services p {
+  padding-bottom: 16px;
+}
 .services ul {
-  padding-top: 8px;
   color: var(--dark);
   font-size: 18px;
   line-height: 30px;
@@ -177,6 +178,9 @@ header nav a:hover {
 /********************************************************
  ------------------ GALLERY -----------------------------
 ********************************************************/
+.gallery {
+  padding-top: 120px;
+}
 
 /********************************************************
  ------------------ OPINION -----------------------------
