@@ -104,14 +104,21 @@ header nav ul {
   align-items: center;
   gap: 20px;
 }
-header nav a {
+.header nav ul li a {
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+
   padding: 0px 10px;
 }
-header nav a:hover {
+.header nav ul li a:hover,
+.header nav ul li a:focus {
   color: var(--pink);
-  padding: 10px;
-  background-color: var(--light-beige);
-  border-radius: 50px;
+  /* box-shadow: 2px 4px 8px var(--dark); */
+
+  /* padding: 10px; */
+  /* background-color: var(--light-beige); */
+  /* border-radius: 50px; */
+  transform: translateY(-4px);
 }
 .is-active {
   color: var(--light-beige);
