@@ -163,10 +163,10 @@ header nav a:hover {
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
 }
-.services ul {
-  list-style-type: symbols(heart);
-  /* list-style-type: disc; */
+#check {
+  fill: var(--darkest-pink);
 }
+
 /********************************************************
  ------------------ GALLERY -----------------------------
 ********************************************************/
