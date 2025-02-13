@@ -55,7 +55,7 @@ p {
 h1 {
   color: var(--dark);
   font-weight: 600;
-  font-size: 38px;
+  font-size: 32px;
   margin-top: 0;
   text-align: center;
 }
@@ -109,20 +109,64 @@ header nav a {
   padding: 0px 10px;
 }
 header nav a:hover {
-  enable-background: accumulate;
-  color: var(--powder-pink);
+  color: var(--pink);
   padding: 10px;
-  background-color: var(--dark-pink);
+  background-color: var(--light-beige);
   border-radius: 50px;
 }
 .is-active {
   color: var(--light-beige);
-  text-decoration: underline;
+  background-color: var(--dark-pink);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+/********************************************************
+ ------------------ HERO --------------------------------
+********************************************************/
+#hero {
+  background: linear-gradient(to bottom, #dfada8 0%, #eac2b8 50%, #fff8f0 100%);
+}
+.hero {
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  gap: 20px;
+  justify-content: space-between;
+}
+.hero-content {
+  width: 100%;
+  margin-top: 24px;
+  place-items: center;
+  gap: 20px;
+  display: grid;
+}
+.hero-img img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
 }
 /********************************************************
  ------------------ SERVICES ----------------------------
 ********************************************************/
-
+.services {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 40px;
+  justify-content: space-between;
+}
+.services img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+}
+.services ul {
+  list-style-type: symbols(heart);
+  /* list-style-type: disc; */
+}
 /********************************************************
  ------------------ GALLERY -----------------------------
 ********************************************************/
