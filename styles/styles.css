@@ -121,8 +121,8 @@ header nav ul {
   transform: translateY(-4px);
 }
 .is-active {
-  color: var(--light-beige);
-  background-color: var(--dark-pink);
+  color: var(--darkest-pink);
+  text-decoration: underline;
   padding: 10px;
   border-radius: 50px;
 }
