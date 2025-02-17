@@ -14,8 +14,14 @@
 .offer ul {
   color: var(--dark);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 40px;
   margin: 0;
+}
+.slideshow-offer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .slideshow-offer1,
 .slideshow-offer2,
@@ -23,8 +29,8 @@
 .slideshow-offer4 {
   position: relative;
   width: 100%;
-  max-width: 550px;
-  height: auto;
+  max-width: 250px;
+  height: 220px;
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
   overflow: hidden;
@@ -80,4 +86,60 @@
 .slideshow-offer3 img:nth-child(4),
 .slideshow-offer4 img:nth-child(4) {
   animation: fade 12s infinite 9s;
+}
+.offer-text {
+  align-content: center;
+}
+.offer-price {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.offer-price p {
+  margin-top: 14px;
+}
+.offer-table {
+  width: 100%;
+  max-width: 860px;
+  border: solid 1px var(--powder-pink);
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+  padding: 20px;
+}
+.offer-table-price {
+  text-align: right;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+colgroup col:first-child {
+  width: 70%;
+}
+colgroup col:last-child {
+  width: 30%;
+}
+td {
+  font-size: 18px;
+  padding: 18px;
+  text-align: left;
+  border-bottom: 2px solid var(--powder-pink);
+}
+td span {
+  font-size: 16px;
+}
+table,
+td {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.merged td {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--powder-pink);
 }
