@@ -13,6 +13,10 @@
 }
 .statute ul {
   padding: 0;
+  margin-left: 0;
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 30px;
   margin-bottom: 28px;
 }
 .statute h3 {
@@ -21,4 +25,14 @@
 .statute span {
   font-size: 20px;
   font-weight: 500;
+}
+.statute li {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+.statute #check {
+  fill: var(--dark-pink);
+  margin-right: 10px;
 }
