@@ -1,0 +1,24 @@
+/********************************************************
+ ------------------ STATUTE -----------------------------
+********************************************************/
+#statute {
+  background-image: url(../images/statute-background.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+.statute {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.statute ul {
+  padding: 0;
+  margin-bottom: 28px;
+}
+.statute h3 {
+  margin-top: 30px;
+}
+.statute span {
+  font-size: 20px;
+  font-weight: 500;
+}
