@@ -1,0 +1,83 @@
+/********************************************************
+ ------------------ OFFER -------------------------------
+********************************************************/
+.offer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.offer-content {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 40px;
+  justify-content: space-between;
+}
+.offer ul {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+}
+.slideshow-offer1,
+.slideshow-offer2,
+.slideshow-offer3,
+.slideshow-offer4 {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+  overflow: hidden;
+}
+.slideshow-offer1 img,
+.slideshow-offer2 img,
+.slideshow-offer3 img,
+.slideshow-offer4 img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.slideshow-offer1 img:nth-child(1),
+.slideshow-offer2 img:nth-child(1),
+.slideshow-offer3 img:nth-child(1),
+.slideshow-offer4 img:nth-child(1) {
+  animation: fade 12s infinite;
+}
+.slideshow-offer1 img:nth-child(2),
+.slideshow-offer2 img:nth-child(2),
+.slideshow-offer3 img:nth-child(2),
+.slideshow-offer4 img:nth-child(2) {
+  animation: fade 12s infinite 3s;
+}
+.slideshow-offer1 img:nth-child(3),
+.slideshow-offer2 img:nth-child(3),
+.slideshow-offer3 img:nth-child(3),
+.slideshow-offer4 img:nth-child(3) {
+  animation: fade 12s infinite 6s;
+}
+.slideshow-offer1 img:nth-child(4),
+.slideshow-offer2 img:nth-child(4),
+.slideshow-offer3 img:nth-child(4),
+.slideshow-offer4 img:nth-child(4) {
+  animation: fade 12s infinite 9s;
+}

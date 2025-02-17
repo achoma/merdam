@@ -71,6 +71,13 @@ h3 {
   font-size: 24px;
   margin-top: 0;
 }
+h4 {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 0;
+  line-height: 30px;
+}
 button {
   padding-top: 50px;
   text-align: center;
