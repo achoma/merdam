@@ -120,7 +120,7 @@ header nav ul {
   transform: scale(1.08);
 }
 .is-active {
-  color: var(--darkest-pink);
+  color: var(--pink);
   text-decoration: underline;
   padding: 10px;
 }
