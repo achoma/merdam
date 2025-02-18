@@ -1,0 +1,55 @@
+/********************************************************
+ ------------------ CONTACTS -----------------------------
+********************************************************/
+.contacts-content {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.contacts {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 34px;
+  justify-content: right;
+}
+.contacts-text {
+  margin: 0;
+  align-content: center;
+  text-align: center;
+}
+.contacts-img {
+  justify-content: right;
+  width: 100%;
+}
+.contacts-img img {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+}
+.map-container {
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  justify-content: center;
+  text-align: center;
+  margin-top: 90px;
+  align-content: center;
+}
+iframe {
+  justify-content: right;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 680px;
+  height: 400px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+}
+.map-container-item {
+  margin: 0;
+  align-content: center;
+  justify-content: center;
+}
+.navigate-btn {
+  margin-top: 34px;
+}
