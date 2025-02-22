@@ -1,3 +1,7 @@
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 #gallery {
   display: flex;
   flex-wrap: wrap;
