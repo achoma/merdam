@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const sheetId = "14f0CJcM0PIpacskaRJ5ZcOhF0sbLU2z54jx4lZ9E1T8";
   const apiUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
 
-  const itemsPerPage = 20;
+  const itemsPerPage = 16;
   let images = [];
   let currentPage = 1;
-  let lightbox; // Zmienna dla SimpleLightbox
+  let lightbox;
 
   fetch(apiUrl)
     .then((response) => response.text())
@@ -17,11 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const jsonData = JSON.parse(data.substring(47, data.length - 2));
       const rows = jsonData.table.rows;
 
-      // Pobieramy zdjęcia, pomijając nagłówek
-      images = rows.slice(1).map((row) => ({
-        url: row.c[0]?.v || "",
-        title: row.c[1]?.v || "Bez tytułu",
-      }));
+      // Pobieramy zdjęcia, pomijając nagłówek, i odwracamy kolejność, aby najnowsze były pierwsze
+      images = rows
+        .slice(1) // Pomijamy nagłówek
+        .map((row) => ({
+          url: row.c[0]?.v || "",
+          title: row.c[1]?.v || "Bez tytułu",
+        }))
+        .reverse(); // Odwrócenie kolejności
 
       renderGallery();
       renderPagination();
@@ -40,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const galleryItem = document.createElement("a");
       galleryItem.href = image.url;
       galleryItem.classList.add("gallery-item");
-      galleryItem.setAttribute("data-caption", image.title); // ✅ Poprawione: używamy data-caption zamiast title
+      galleryItem.setAttribute("data-caption", image.title); // ✅ Przekazanie opisu
 
       const imgElement = document.createElement("img");
       imgElement.src = image.url;
@@ -62,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inicjalizujemy SimpleLightbox ponownie po każdym załadowaniu galerii
     lightbox = new SimpleLightbox(".gallery-item", {
       captions: true,
-      captionsData: "data-caption", // ✅ Poprawione: teraz odczytuje data-caption
+      captionsData: "data-caption",
       captionDelay: 250,
       close: true,
       nav: true,

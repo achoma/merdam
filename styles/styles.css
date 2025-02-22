@@ -140,6 +140,7 @@ header nav ul {
 }
 .hero {
   padding-top: 16px;
+  padding-bottom: 78px;
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
   gap: 20px;
@@ -214,6 +215,11 @@ header nav ul {
 }
 .latest-gallery-item img:hover {
   transform: scale(1.05);
+}
+.gallery a {
+  display: grid;
+  margin-top: 38px;
+  place-items: center;
 }
 /********************************************************
  ------------------ OPINION -----------------------------
@@ -330,7 +336,7 @@ header nav ul {
  ------------------ CONTACT -----------------------------
 ********************************************************/
 .contact-content {
-  padding-top: 120px;
+  padding-top: 68px;
   padding-bottom: 120px;
 }
 .contact {
