@@ -8,14 +8,12 @@
   gap: 20px;
   justify-content: center;
 }
-
 .gallery-item {
   display: block;
   width: 260px;
   height: auto;
   cursor: pointer;
 }
-
 .gallery-item img {
   width: 100%;
   height: auto;
@@ -23,16 +21,13 @@
   box-shadow: 2px 4px 8px var(--dark);
   transition: transform 0.3s ease;
 }
-
 .gallery-item img:hover {
   transform: scale(1.05);
 }
-
 .pagination-container {
   margin-top: 60px;
   text-align: center;
 }
-
 .page-btn {
   background-color: var(--dark-pink);
   color: white;
@@ -43,11 +38,13 @@
   border-radius: 50px;
   font-size: 16px;
 }
-
 .page-btn.active {
   background-color: var(--darkest-pink);
 }
-
 .page-btn:hover {
   background-color: var(--gold);
+}
+.sl-image {
+  box-shadow: 2px 4px 8px var(--dark);
+  border-radius: 8px;
 }
