@@ -2,20 +2,52 @@
   padding-top: 120px;
   padding-bottom: 120px;
 }
-#gallery {
+.gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
 }
 
 .gallery-item {
-  width: 200px;
-  border: 1px solid #ddd;
-  padding: 5px;
+  display: block;
+  width: 260px;
+  height: auto;
+  cursor: pointer;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px var(--dark);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.pagination-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.page-btn {
+  background-color: var(--dark-pink);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.page-btn.active {
+  background-color: var(--darkest-pink);
+}
+
+.page-btn:hover {
+  background-color: var(--gold);
 }
