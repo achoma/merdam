@@ -9,7 +9,7 @@ async function fetchPopupSettings() {
     const lines = text.split("\n");
     const data = lines[1].split("\t");
 
-    const isActive = data[0].trim() === "true";
+    const isActive = data[0].trim() === "TRUE";
     const message = data[1].trim();
 
     return { isActive, message };
