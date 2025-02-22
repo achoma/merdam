@@ -1,5 +1,5 @@
 // Adres JSON z Google Sheets (podmień na swój)
-const sheetUrl = "https://docs.google.com/spreadsheets/d/e/1M5QIdh8xn2teGJaPT34ZwMtBaKc_agFBgwB_kNTaroU/pub?output=tsv";
+const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcmDpUgqf_zxw_I2mgaF_0JdVVF31fRu-bB1aRSe6H9rspYROIcu_FDYiHzSsm7Vu5wsKdxJUJEu92/pub?output=tsv";
 
 // Funkcja pobierająca dane z Google Sheets
 async function fetchPopupSettings() {
