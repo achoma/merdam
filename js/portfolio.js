@@ -1,34 +1,41 @@
-// Wklej tutaj link do opublikowanego arkusza w formacie CSV
-const sheetURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7YnovprHgRzQ_6Lu1xY_8IUqUtkIhNN9Ue3K-dRENFYzDAMPBZOTi4XAAttmdCHWohUT9L-DGSCgo/pub?gid=0&single=true&output=csv";
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryContainer = document.getElementById("gallery");
 
-async function loadGallery() {
-  try {
-    const response = await fetch(sheetURL);
-    const data = await response.text();
-    const rows = data.split("\n").slice(1); // Pomijamy nagłówek
+  // Wstaw ID swojego arkusza Google Sheets
+  const sheetId = "14f0CJcM0PIpacskaRJ5ZcOhF0sbLU2z54jx4lZ9E1T8";
 
-    let galleryHTML = "";
+  const apiUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
 
-    rows.forEach((row) => {
-      const [image_url, title] = row.split(",");
+  fetch(apiUrl)
+    .then((response) => response.text())
+    .then((data) => {
+      const jsonData = JSON.parse(data.substring(47, data.length - 2));
+      const rows = jsonData.table.rows;
 
-      if (image_url) {
-        galleryHTML += `
-                            <div>
-                                <img src="${image_url.trim()}" alt="${
-          title ? title.trim() : "Zdjęcie"
-        }">
-                                <p>${title ? title.trim() : ""}</p>
-                            </div>
-                        `;
-      }
-    });
+      rows.forEach((row) => {
+        const imageUrl = row.c[0]?.v || "";
+        const imageTitle = row.c[1]?.v || "Bez tytułu";
 
-    document.getElementById("gallery").innerHTML = galleryHTML;
-  } catch (error) {
-    console.error("Błąd ładowania galerii:", error);
-  }
-}
+        if (!imageUrl) return;
 
-loadGallery();
+        const galleryItem = document.createElement("div");
+        galleryItem.classList.add("gallery-item");
+
+        const imgElement = document.createElement("img");
+        imgElement.src = imageUrl;
+        imgElement.alt = imageTitle;
+
+        imgElement.onerror = function () {
+          this.src = "https://via.placeholder.com/200x150?text=Brak+zdjęcia";
+        };
+
+        const titleElement = document.createElement("p");
+        titleElement.textContent = imageTitle;
+
+        galleryItem.appendChild(imgElement);
+        galleryItem.appendChild(titleElement);
+        galleryContainer.appendChild(galleryItem);
+      });
+    })
+    .catch((error) => console.error("Błąd ładowania galerii:", error));
+});
