@@ -30,5 +30,12 @@
   font-size: 18px;
   line-height: 30px;
   margin: 0;
-  text-align: center;
+  text-align: left;
+}
+.blog-post a {
+  color: var(--darkest-pink);
+}
+.blog-post a:focus,
+.blog-post a:hover {
+  color: var(--pink);
 }

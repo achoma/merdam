@@ -14,17 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
       // Pomiń pierwszy wiersz (nagłówki)
       rows.slice(1).forEach((row) => {
         const title = row.c[0]?.v || "Brak tytułu"; // Tytuł posta
-        const content = row.c[1]?.v || "Brak treści"; // Treść posta
+        let content = row.c[1]?.v || "Brak treści"; // Treść posta
+
+        // Zamiana \n na <br> dla poprawnego formatowania nowych linii
+        content = content.replace(/\n/g, "<br>");
 
         // Tworzymy element HTML dla każdego posta
         const postElement = document.createElement("div");
         postElement.classList.add("blog-post");
 
         const titleElement = document.createElement("h2");
-        titleElement.textContent = title;
+        titleElement.textContent = title; // Tytuł nie powinien mieć HTML
 
         const contentElement = document.createElement("p");
-        contentElement.textContent = content;
+        contentElement.innerHTML = content; // Interpretacja HTML w treści posta
 
         // Dodajemy tytuł i treść do posta
         postElement.appendChild(titleElement);
