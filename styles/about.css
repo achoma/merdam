@@ -17,13 +17,13 @@
   max-width: 550px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 2px 4px 8px var(--dark);
   overflow: hidden;
 }
 .slideshow-container img {
   position: absolute;
   width: 100%;
   height: auto;
+  box-shadow: 2px 4px 8px var(--dark);
 
   object-fit: cover;
   opacity: 0;
