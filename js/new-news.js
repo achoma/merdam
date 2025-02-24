@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Tworzymy strukturę posta
       const postHTML = `
-        <h2>${postTitle}</h2>
+        <h4>${postTitle}</h4>
         <p>${postContent}</p>
       `;
 
