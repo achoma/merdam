@@ -157,20 +157,7 @@ header nav ul {
     display: none;
   }
 }
-/* .hamburger-icon {
-  /* max-width: 40px;
-  max-height: 40px; */
-/*fill: var(--pink);
-  color: var(--pink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-/* .hamburger-icon:hover,
-.hamburger-icon:focus {
-  fill: var(--darkest-pink);
-  color: var(--green);
-} */
+
 .menu-toggle svg {
   color: var(--dark);
 }
@@ -182,7 +169,7 @@ header nav ul {
   position: fixed;
   right: 6px;
   top: 8px;
-  width: 90vw;
+  width: 100vw;
   height: 80vh;
   padding-left: 20px;
   border-radius: 8px;
