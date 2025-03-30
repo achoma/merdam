@@ -152,7 +152,7 @@ header nav ul {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .menu-toggle {
     display: none;
   }
