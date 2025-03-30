@@ -253,14 +253,17 @@ header nav ul {
   justify-content: center;
   gap: 20px;
 }
-.hero-content img {
+/* .hero-content img {
   width: 200px;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .hero-img {
     display: flex;
     max-width: 480px;
+  }
+  .hero-content img {
+    width: 200px;
   }
   .hero {
     padding-top: 16px;
