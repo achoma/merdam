@@ -126,12 +126,122 @@ header nav ul {
   color: var(--darkest-pink);
   transform: scale(1.08);
 }
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
 .is-active {
   color: var(--pink);
   text-decoration: underline;
   padding: 10px;
 }
+/********************************************************
+ ------------------ HEADER MOBILE -----------------------
+********************************************************/
+.menu-toggle {
+  display: flex;
+  margin-right: 8px;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
 
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+/* .hamburger-icon {
+  /* max-width: 40px;
+  max-height: 40px; */
+/*fill: var(--pink);
+  color: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* .hamburger-icon:hover,
+.hamburger-icon:focus {
+  fill: var(--darkest-pink);
+  color: var(--green);
+} */
+.menu-toggle svg {
+  color: var(--dark);
+}
+.menu-toggle svg:hover,
+.menu-toggle svg:focus {
+  color: var(--pink);
+}
+.menu-container {
+  position: fixed;
+  right: 6px;
+  top: 8px;
+  width: 60vw;
+  height: 80vh;
+  padding-left: 20px;
+  border-radius: 8px;
+  background-color: var(--light-beige);
+  box-shadow: -2px 4px 8px var(--dark);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  visibility: hidden;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--light-beige);
+  color: var(--pink);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu-container .menu-toggle:hover,
+.menu-container .menu-toggle:focus {
+  background-color: var(--powder-pink);
+  fill: var(--light-beige);
+}
+.mobile-menu {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-mobile {
+  padding: 0;
+  margin-top: 80px;
+}
+.menu-mobile a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.71;
+  letter-spacing: 0.72px;
+  color: var(--dark);
+  padding-bottom: 6px;
+}
+.menu-mobile a:hover,
+.menu-mobile a:focus {
+  color: var(--darkest-pink);
+  text-decoration: underline;
+}
+
+.button-close svg {
+  color: var(--light);
+}
 /********************************************************
  ------------------ HERO --------------------------------
 ********************************************************/
