@@ -61,6 +61,8 @@
 .about-btn {
   margin-top: 90px;
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 5px;
   justify-content: center;
-  gap: 50px;
 }
