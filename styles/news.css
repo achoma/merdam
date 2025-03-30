@@ -11,7 +11,8 @@
 #blog-posts {
   margin-top: 0;
   padding-top: 0;
-  min-width: 1200px;
+  width: 100%;
+  max-width: 100%;
   width: 100%;
 }
 .blog-post {
