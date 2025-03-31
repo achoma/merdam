@@ -368,17 +368,51 @@ header nav ul {
  ------------------ OPINION -----------------------------
 ********************************************************/
 .opinion {
-  padding-top: 120px;
+  display: none;
+}
+.opinion-content {
+  align-items: center;
+
+  padding-top: 70px;
   display: grid;
-  grid-template-columns: 0.35fr 0.65fr;
+  grid-template-columns: 0.6fr 0.4fr;
   gap: 40px;
   justify-content: space-between;
+}
+.opinion-content h2 {
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .opinion {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  .opinion-mobile {
+    display: none;
+  }
+}
+.opinion-mobile img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 500px;
+  box-shadow: 2px 4px 8px var(--dark);
 }
 .opinion img {
   width: 100%;
   max-width: 380px;
   border-radius: 500px;
   box-shadow: 2px 4px 8px var(--dark);
+}
+.opinion-mobile .carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .carousel {
   position: relative;
