@@ -454,6 +454,7 @@ header nav ul {
  ------------------ NEWS --------------------------------
 ********************************************************/
 .news {
+  background-color: transparent;
   padding-top: 70px;
   display: flex;
   flex-direction: column;
@@ -516,12 +517,16 @@ header nav ul {
 }
 @media screen and (min-width: 1200px) {
   .news {
+    background-color: var(--light-beige);
     background: none;
     padding-top: 120px;
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
     gap: 40px;
     justify-content: space-between;
+  }
+  .news::before {
+    background-color: var(--light-beige);
   }
   .news img {
     display: flex;
