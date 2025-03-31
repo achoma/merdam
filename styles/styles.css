@@ -372,17 +372,17 @@ header nav ul {
 }
 .opinion-content {
   align-items: center;
-
   padding-top: 70px;
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
-  gap: 40px;
+  gap: 20px;
   justify-content: space-between;
 }
 .opinion-content h2 {
   padding-bottom: 0px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .opinion {
@@ -420,7 +420,20 @@ header nav ul {
   overflow: hidden;
   border-radius: 10px;
 }
+.carousel-m {
+  margin-top: 20px;
+  position: relative;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 .carousel img {
+  width: 100%;
+  max-width: 780px;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.carousel-m img {
   width: 100%;
   max-width: 780px;
   border-radius: 0px;
@@ -431,15 +444,34 @@ header nav ul {
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
+.carousel-track-m {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
 .carousel-slide {
+  min-width: 100%;
+}
+.carousel-slide-m {
   min-width: 100%;
 }
 .carousel-slide img {
   width: 100%;
   display: block;
 }
-
+.carousel-slide-m img {
+  width: 100%;
+  display: block;
+}
 .carousel-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-arrows-m {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -468,6 +500,11 @@ header nav ul {
   box-shadow: none;
 }
 .carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+.carousel-dots-m {
   display: flex;
   justify-content: center;
   margin-top: 4px;

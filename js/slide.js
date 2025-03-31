@@ -50,3 +50,57 @@ dots.forEach((dot, index) => {
     autoSlide = setInterval(moveToNextSlide, 3000);
   });
 });
+
+// Kod dla drugiej karuzeli
+const trackM = document.querySelector(".carousel-track-m");
+const slidesM = Array.from(trackM.children);
+const prevButtonM = document.querySelector(".left-arrow-m");
+const nextButtonM = document.querySelector(".right-arrow-m");
+const dotsNavM = document.querySelector(".carousel-dots-m");
+
+// Tworzenie kropek dla karuzeli M
+slidesM.forEach((_, index) => {
+  const dotM = document.createElement("div");
+  dotM.classList.add("dot-m");
+  if (index === 0) dotM.classList.add("active");
+  dotsNavM.appendChild(dotM);
+});
+
+const dotsM = Array.from(dotsNavM.children);
+
+let currentIndexM = 0;
+
+function updateCarouselM(index) {
+  trackM.style.transform = `translateX(-${index * 100}%)`;
+  dotsM.forEach((dotM) => dotM.classList.remove("active"));
+  dotsM[index].classList.add("active");
+}
+
+function moveToNextSlideM() {
+  currentIndexM = (currentIndexM + 1) % slidesM.length;
+  updateCarouselM(currentIndexM);
+}
+
+let autoSlideM = setInterval(moveToNextSlideM, 3000);
+
+nextButtonM.addEventListener("click", () => {
+  clearInterval(autoSlideM);
+  moveToNextSlideM();
+  autoSlideM = setInterval(moveToNextSlideM, 3000);
+});
+
+prevButtonM.addEventListener("click", () => {
+  clearInterval(autoSlideM);
+  currentIndexM = (currentIndexM - 1 + slidesM.length) % slidesM.length;
+  updateCarouselM(currentIndexM);
+  autoSlideM = setInterval(moveToNextSlideM, 3000);
+});
+
+dotsM.forEach((dotM, index) => {
+  dotM.addEventListener("click", () => {
+    clearInterval(autoSlideM);
+    currentIndexM = index;
+    updateCarouselM(currentIndexM);
+    autoSlideM = setInterval(moveToNextSlideM, 3000);
+  });
+});
