@@ -9,21 +9,27 @@
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   gap: 40px;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 90px;
+}
+.about-content-text{display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 .slideshow-container {
   position: relative;
-  width: 100%;
-  max-width: 550px;
-  height: auto;
+  width: auto;
+  /* max-width: 550px; */
+  /* min-height: 650px; */
+  height: 550px;
   border-radius: 8px;
   overflow: hidden;
 }
 .slideshow-container img {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   box-shadow: 2px 4px 8px var(--dark);
   object-fit: cover;
   opacity: 0;
