@@ -2,15 +2,13 @@
  ------------------ ABOUT -------------------------------
 ********************************************************/
 .about {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .about-content {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  gap: 40px;
-  justify-content: center;
-  padding-bottom: 90px;
+  display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 .about-content-text{display: flex;
   justify-content: center;
@@ -26,7 +24,46 @@
   border-radius: 8px;
   overflow: hidden;
 }
-.slideshow-container img {
+.slideshow-container-m {
+  position: relative;
+  width: auto;
+  /* max-width: 550px; */
+  /* min-height: 650px; */
+  height: 550px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.slideshow-container-m2{
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .about {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+        .about-content {
+          display: grid;
+          grid-template-columns: 0.5fr 0.5fr;
+          gap: 40px;
+          justify-content: center;
+          padding-bottom: 90px;
+        }
+  .slideshow-container-m {
+      display: none;
+    }
+  .slideshow-container-m2 {
+          display: flex;
+      position: relative;
+      width: auto;
+      /* max-width: 550px; */
+      /* min-height: 650px; */
+      height: 550px;
+      border-radius: 8px;
+      overflow: hidden;
+}}
+.slideshow-container img,
+.slideshow-container-m img,
+.slideshow-container-m2 img {
   position: absolute;
   width: auto;
   height: 100%;
@@ -52,16 +89,24 @@
     opacity: 0;
   }
 }
-.slideshow-container img:nth-child(1) {
+.slideshow-container img:nth-child(1),
+.slideshow-container-m img:nth-child(1),
+.slideshow-container-m2 img:nth-child(1){
   animation: fade 12s infinite;
 }
-.slideshow-container img:nth-child(2) {
+.slideshow-container img:nth-child(2),
+.slideshow-container-m img:nth-child(2),
+.slideshow-container-m2 img:nth-child(2) {
   animation: fade 12s infinite 3s;
 }
-.slideshow-container img:nth-child(3) {
+.slideshow-container img:nth-child(3),
+.slideshow-container-m img:nth-child(3),
+.slideshow-container-m2 img:nth-child(3) {
   animation: fade 12s infinite 6s;
 }
-.slideshow-container img:nth-child(4) {
+.slideshow-container img:nth-child(4),
+.slideshow-container-m img:nth-child(4),
+.slideshow-container-m2 img:nth-child(4) {
   animation: fade 12s infinite 9s;
 }
 .about-btn {

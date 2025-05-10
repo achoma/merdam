@@ -240,7 +240,6 @@ header nav ul {
   padding-bottom: 78px;
   display: flex;
   flex-direction: column;
-
   gap: 40px;
 }
 .hero h1 {
@@ -306,6 +305,17 @@ header nav ul {
  ------------------ SERVICES ----------------------------
 ********************************************************/
 .services {
+  padding-top: 16px;
+    padding-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.services img{
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .services {
   padding-top: 120px;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
@@ -313,11 +323,16 @@ header nav ul {
   justify-content: space-between;
 }
 .services img {
+  display: flex;
   width: 100%;
   max-width: 480px;
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
-}
+}}
+
+
+
+
 .services p {
   padding-bottom: 16px;
 }
@@ -339,7 +354,7 @@ header nav ul {
  ------------------ GALLERY -----------------------------
 ********************************************************/
 .gallery {
-  padding-top: 120px;
+  padding-top: 70x;
 }
 .latest-gallery {
   display: flex;
@@ -363,6 +378,11 @@ header nav ul {
   display: grid;
   margin-top: 38px;
   place-items: center;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+      padding-top: 120x;
+    }
 }
 /********************************************************
  ------------------ OPINION -----------------------------
@@ -618,19 +638,16 @@ header nav ul {
   padding-bottom: 120px;
 }
 .contact {
-  border: solid 1px blue;
   display: flex;
   flex-direction: column;
   gap: 40px;
   /* justify-content: space-between; */
 }
 .contact-contact {
-  border: solid 1px red;
   display: none;
 }
 @media screen and (min-width: 768px) {
   .contact {
-    border: solid 1px blue;
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
     gap: 40px;
@@ -642,7 +659,6 @@ header nav ul {
     padding-top: 20px;
   }
   .contact-contact {
-    border: solid 1px red;
     display: flex;
     flex-direction: column;
   }
@@ -663,26 +679,21 @@ header nav ul {
   }
 }
 .contact-adress {
-  border: solid 1px red;
   width: 100%;
 }
 .contact-mobile {
-  border: solid 1px red;
   width: 100%;
 }
 .contact-sm {
-  border: solid 1px red;
   width: 100%;
 }
 .contact img {
-  border: solid 1px red;
   width: 100%;
   /* max-width: 680px; */
   border-radius: 8px;
   box-shadow: 2px 4px 8px var(--dark);
 }
 .contact-text {
-  border: solid 1px green;
   justify-content: center;
   /* padding-top: 20px; */
   align-items: center;

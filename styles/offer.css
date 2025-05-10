@@ -2,6 +2,27 @@
  ------------------ OFFER -------------------------------
 ********************************************************/
 .offer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.offer-content {
+  display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.slideshow-offer {
+  display: none;
+
+}
+
+.slideshow-offer-m {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (min-width: 768px){
+  .offer {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -11,18 +32,25 @@
   gap: 40px;
   justify-content: space-between;
 }
-.offer ul {
-  color: var(--dark);
-  font-size: 18px;
-  line-height: 40px;
-  margin: 0;
+.slideshow-offer-m {
+  display: none;
+
 }
 .slideshow-offer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+}}
+
+
+.offer ul {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0;
 }
+
 .slideshow-offer1,
 .slideshow-offer2,
 .slideshow-offer3,
