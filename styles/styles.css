@@ -263,10 +263,10 @@ header nav ul {
 @media screen and (min-width: 768px) {
   .hero-img {
     display: flex;
-    max-width: 480px;
+    /* max-width: 480px; */
   }
   .hero-content img {
-    /* width: 200px; */
+    width: 200px;
   }
   .hero {
     padding-top: 16px;
@@ -296,7 +296,7 @@ header nav ul {
     justify-content: space-between;
   }
   .hero-content img {
-    /* width: 250px; */
+    width: 250px;
   }
 }
 
